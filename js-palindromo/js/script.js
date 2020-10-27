@@ -25,6 +25,9 @@ function comparazione(stringa) {
   if (comparableString(stringa) == reverseString(stringa)) {
     match = true;
   }
+
+  // return comparableString(stringa) == reverseString(stringa); questo rappresenta la versione abbreviata di tutto quello che ho scritto nella function, devo tenere a mente la possibilità di abbreviare la scrittura delle funzioni
+
   return match;
   // avrei potuto compattare tutte e 3 le funzioni nella sola funzione comparazione, ma se mi servissero, per qualche motivo, le funzioni comparableString e reverseString, in questa maniera ce le ho mia disposizione
 }
@@ -37,8 +40,6 @@ document.getElementById("verifica").addEventListener("click", function(){
   var input = document.getElementById("input").value
   // console.log(stringa);
   var output = document.getElementById("output");
-
-  comparazione(input);
 
   if (comparazione(input)) {
     output.innerHTML = "La parola o frase è un polindromo";
