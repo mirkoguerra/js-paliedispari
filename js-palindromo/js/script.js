@@ -31,3 +31,18 @@ function comparazione(stringa) {
 
 // console.log("Il mio cane", comparazione("Il mio cane"));
 // console.log("Ann a", comparazione("Ann a"));
+
+document.getElementById("verifica").addEventListener("click", function(){
+
+  var input = document.getElementById("input").value
+  // console.log(stringa);
+  var output = document.getElementById("output");
+
+  comparazione(input);
+
+  if (comparazione(input)) {
+    output.innerHTML = "La parola o frase è un polindromo";
+  } else {
+    output.innerHTML = "La parola o frase non è un polindromo";
+  }
+});
